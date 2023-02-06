@@ -1,7 +1,6 @@
 package com.GymNonCommercialUse.GymBackEnd.entity;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "member")
@@ -15,7 +14,7 @@ public class Member {
     @Column(name = "name",length = 30)
     private String  memberName;
 
-    @Column(name ="nic",length =13,unique = true)
+    @Column(name ="nic",length =13)
     private String memberNic;
 
     @Column(name = "age",length = 10)
@@ -24,7 +23,7 @@ public class Member {
     @Column(name = "gender")
     private String memberGender;
 
-    @Column(name = "contact",length = 50,unique = true)
+    @Column(name = "contact",length = 50)
     private int memberContact;
 
     @Column(name = "address",length = 20)
@@ -60,10 +59,6 @@ public class Member {
     @Column(name = "active_state",columnDefinition = "TINYINT default 1")
     private boolean activestate;
 
-
-
-    @OneToMany(mappedBy="member")
-    private Set<Oder>oders;
 
 
     public Member() {

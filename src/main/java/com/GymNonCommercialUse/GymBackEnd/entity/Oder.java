@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
 
 @AllArgsConstructor
@@ -27,17 +26,5 @@ public class Oder {
     @Column(name = "total", nullable = false)
     private Double total;
 
-    @ManyToOne
-    @JoinColumn(name = "member_id", nullable = false)
-    private Member member;
-
-    @OneToMany(mappedBy = "oders")
-    private Set<OderDetails> oderDetails;
-
-    public Oder(Date date, Double total, Member member) {
-        this.date = date;
-        this.total = total;
-        this.member = member;
-    }
 
 }

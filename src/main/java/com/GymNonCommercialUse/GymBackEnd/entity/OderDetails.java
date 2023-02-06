@@ -27,13 +27,7 @@ public class OderDetails {
     @Column(name = "amount",length = 30)
     private Double  amount;
 
-    @ManyToOne
-    @JoinColumn(name="oder_id", nullable=false)
-    private Oder oders;
 
-    @ManyToOne
-    @JoinColumn(name="supliment_id", nullable=false)
-    private Supliments supliments;
 
 
 }

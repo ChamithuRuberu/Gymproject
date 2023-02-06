@@ -4,7 +4,6 @@ import com.GymNonCommercialUse.GymBackEnd.entity.enums.MeasuringUnitsType;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "supliments")
@@ -38,8 +37,7 @@ public class Supliments {
     @Column(name = "active_state",columnDefinition = "TINYINT default 1")
     private boolean activestate;
 
-    @OneToMany(mappedBy="supliments")
-    private Set<OderDetails> oderDetails;
+
 
 
 }

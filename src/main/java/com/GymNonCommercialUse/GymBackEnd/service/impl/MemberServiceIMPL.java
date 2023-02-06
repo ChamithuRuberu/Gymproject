@@ -75,6 +75,7 @@ public class MemberServiceIMPL implements MemberService {
     @Override
     public String updateMember(MemberUpdateRequestDTO memberUpdateRequestDTO) {
         if (memberRepo.existsById(memberUpdateRequestDTO.getMemberId())) {
+
             Member member = memberRepo.getById(memberUpdateRequestDTO.getMemberId());
             member.setMemberName(memberUpdateRequestDTO.getMemberName());
             member.setMemberNic(memberUpdateRequestDTO.getMemberNic());
